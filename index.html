@@ -5,12 +5,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="/css/w3.css">
+    <style>
+        ul {
+            list-style: none;
+
+        }
+
+        li {
+            float: left;
+        }
+
+        header {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+
+    </style>
 </head>
 <body>
-<div id="container">
-    <header>
+<div class="w3-container">
+    <header class="w3-panel w3-sand">
         <nav>
-            <ul>
+            <ul class="w3-ul">
+                <li>Bong's</li>
                 <li>HOME</li>
                 <li>About Me!</li>
                 <li>Skills</li>
@@ -21,8 +41,12 @@
             </ul>
         </nav>
     </header>
-    <main class="contents">
-        <section class="main-selection">
+    <div class="w3-display-container">
+        <img class="w3-round" src="images/teamwork.jpg" alt="teamwork_img" width="100%" height="700px;">
+        <div class="w3-display-middle w3-large w3-opacity w3-white">안녕하세요!</div>
+    </div>
+    <main class="w3-content">
+        <section class="w3-section">
             <span>About Me</span>
             <h5>새로운 언어에 눈을 뜬 개발자</h5>
             <h4>제목 어쩌고 저쩌고~</h4>
@@ -34,23 +58,98 @@
             </p>
         </section>
 
-        <section class="main-selection">
-            <span>Skills</span>
-
-            <p>JAVA</p>
-            <div class="w3-light-grey w3-round">
-                <div class="w3-container w3-round w3-blue" style="width:60%">60%</div>
+        <section class="w3-section">
+            <div class="w3-container">
+                <span>Skills</span>
+                <p>JAVA</p>
+                <div class="w3-light-grey w3-round">
+                    <div class="w3-container w3-round w3-blue" style="width:60%">60%</div>
+                </div>
+                <p>자바 기초를 시작으로 처음 프로그래밍 언어를 배웠습니다. 기초문법부터 시작해서 객체지향과 중급자바과정을 배우고 MVC 패턴을 익히고, Spring framework를 사용하면서
+                    웹개발의 기본을 다졌습니다. </p>
+            </div>
+            <div class="w3-container">
+                <p>Python</p>
+                <div class="w3-light-grey w3-round">
+                    <div class="w3-container w3-round w3-blue" style="width:60%">60%</div>
+                </div>
+                <p>자바 기초를 시작으로 처음 프로그래밍 언어를 배웠습니다. 기초문법부터 시작해서 객체지향과 중급자바과정을 배우고 MVC 패턴을 익히고, Spring framework를 사용하면서
+                    웹개발의 기본을 다졌습니다. </p>
+            </div>
+            <div class="w3-container">
+                <p>HTML5</p>
+                <div class="w3-light-grey w3-round">
+                    <div class="w3-container w3-round w3-blue" style="width:60%">60%</div>
+                </div>
+                <p>자바 기초를 시작으로 처음 프로그래밍 언어를 배웠습니다. 기초문법부터 시작해서 객체지향과 중급자바과정을 배우고 MVC 패턴을 익히고, Spring framework를 사용하면서
+                    웹개발의 기본을 다졌습니다. </p>
+            </div>
+            <div class="w3-container">
+                <p>CSS3</p>
+                <div class="w3-light-grey w3-round">
+                    <div class="w3-container w3-round w3-blue" style="width:60%">60%</div>
+                </div>
+                <p>자바 기초를 시작으로 처음 프로그래밍 언어를 배웠습니다. 기초문법부터 시작해서 객체지향과 중급자바과정을 배우고 MVC 패턴을 익히고, Spring framework를 사용하면서
+                    웹개발의 기본을 다졌습니다. </p>
+            </div>
+            <div class="w3-container">
+                <p>Java Script</p>
+                <div class="w3-light-grey w3-round">
+                    <div class="w3-container w3-round w3-blue" style="width:60%">60%</div>
+                </div>
+                <p>자바 기초를 시작으로 처음 프로그래밍 언어를 배웠습니다. 기초문법부터 시작해서 객체지향과 중급자바과정을 배우고 MVC 패턴을 익히고, Spring framework를 사용하면서
+                    웹개발의 기본을 다졌습니다. </p>
+            </div>
+            <div class="w3-container">
+                <p>RDBMS</p>
+                <div class="w3-light-grey w3-round">
+                    <div class="w3-container w3-round w3-blue" style="width:60%">60%</div>
+                </div>
+                <p>자바 기초를 시작으로 처음 프로그래밍 언어를 배웠습니다. 기초문법부터 시작해서 객체지향과 중급자바과정을 배우고 MVC 패턴을 익히고, Spring framework를 사용하면서
+                    웹개발의 기본을 다졌습니다. </p>
+            </div>
+            <div class="w3-container">
+                <p>Mybatis</p>
+                <div class="w3-light-grey w3-round">
+                    <div class="w3-container w3-round w3-blue" style="width:60%">60%</div>
+                </div>
+                <p>자바 기초를 시작으로 처음 프로그래밍 언어를 배웠습니다. 기초문법부터 시작해서 객체지향과 중급자바과정을 배우고 MVC 패턴을 익히고, Spring framework를 사용하면서
+                    웹개발의 기본을 다졌습니다. </p>
+            </div>
+            <div class="w3-container">
+                <p>JPA</p>
+                <div class="w3-light-grey w3-round">
+                    <div class="w3-container w3-round w3-blue" style="width:60%">60%</div>
+                </div>
+                <p>자바 기초를 시작으로 처음 프로그래밍 언어를 배웠습니다. 기초문법부터 시작해서 객체지향과 중급자바과정을 배우고 MVC 패턴을 익히고, Spring framework를 사용하면서
+                    웹개발의 기본을 다졌습니다. </p>
+            </div>
+            <div class="w3-container">
+                <p>AWS EC2</p>
+                <div class="w3-light-grey w3-round">
+                    <div class="w3-container w3-round w3-blue" style="width:60%">60%</div>
+                </div>
+                <p>자바 기초를 시작으로 처음 프로그래밍 언어를 배웠습니다. 기초문법부터 시작해서 객체지향과 중급자바과정을 배우고 MVC 패턴을 익히고, Spring framework를 사용하면서
+                    웹개발의 기본을 다졌습니다. </p>
+            </div>
+            <div class="w3-container">
+                <p>Git</p>
+                <div class="w3-light-grey w3-round">
+                    <div class="w3-container w3-round w3-blue" style="width:60%">60%</div>
+                </div>
+                <p>자바 기초를 시작으로 처음 프로그래밍 언어를 배웠습니다. 기초문법부터 시작해서 객체지향과 중급자바과정을 배우고 MVC 패턴을 익히고, Spring framework를 사용하면서
+                    웹개발의 기본을 다졌습니다. </p>
             </div>
         </section>
-        <section class="main-selection">
+        <section class="w3-section">
             <span>Project</span>
 
         </section>
-        <section class="main-selection">
+        <section class="w3-section">
             <span>EDUCATION</span>
         </section>
 
-        <section class="main-selection">
+        <section class="w3-section">
             <span>CAREER</span>
         </section>
     </main>
