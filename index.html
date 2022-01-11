@@ -42,35 +42,34 @@
     </style>
 </head>
 <body>
+<button class="w3-button w3-teal w3-xlarge w3-display-left" id="sidebar">☰</button>
+<div class="w3-sidebar w3-bar-block w3-border-right w3-panel w3-blue" style="display:none" id="mySidebar">
+    <nav>
+        <ul class="w3-ul">
+            <li><strong>Menu</strong></li>
+            <a href="javascript:void(0);" onclick="moveTo('about');">
+                <li><strong>About</strong></li>
+            </a>
+            <a href="javascript:void(0);" onclick="moveTo('skills');">
+                <li><strong>Skills</strong></li>
+            </a>
+            <a href="javascript:void(0);" onclick="moveTo('project');">
+                <li><strong>Project</strong></li>
+            </a>
+            <a href="javascript:void(0);" onclick="moveTo('edu');">
+                <li><strong>EDUCATION</strong></li>
+            </a>
+            <a href="javascript:void(0);" onclick="moveTo('career');">
+                <li><strong>CAREER</strong></li>
+            </a>
+            <a href="javascript:void(0);" onclick="moveTo('contact');">
+                <li><strong>CONTACT</strong></li>
+            </a>
+        </ul>
+    </nav>
+</div>
+
 <div class="w3-container">
-    <button class="w3-button w3-teal w3-xlarge w3-display-left" id="sidebar">☰</button>
-    <div class="w3-sidebar w3-bar-block w3-border-right w3-panel w3-blue" style="display:none" id="mySidebar">
-        <nav>
-            <ul class="w3-ul">
-                <li><strong>Menu</strong></li>
-                <a href="javascript:void(0);" onclick="moveTo('about');">
-                    <li><strong>About</strong></li>
-                </a>
-                <a href="javascript:void(0);" onclick="moveTo('skills');">
-                    <li><strong>Skills</strong></li>
-                </a>
-                <a href="javascript:void(0);" onclick="moveTo('project');">
-                    <li><strong>Project</strong></li>
-                </a>
-                <a href="javascript:void(0);" onclick="moveTo('edu');">
-                    <li><strong>EDUCATION</strong></li>
-                </a>
-                <a href="javascript:void(0);" onclick="moveTo('career');">
-                    <li><strong>CAREER</strong></li>
-                </a>
-                <a href="javascript:void(0);" onclick="moveTo('contact');">
-                    <li><strong>CONTACT</strong></li>
-                </a>
-            </ul>
-        </nav>
-    </div>
-
-
     <section class="w3-section" id="about">
         <span>About Me</span>
         <div class="w3-display-container">
@@ -84,6 +83,8 @@
             </p>
         </div>
     </section>
+</div>
+<div class="w3-container">
     <section class="w3-section" id="skills">
         <span>Skills</span>
         <div class="w3-row-padding">
@@ -161,6 +162,8 @@
             </div>
         </div>
     </section>
+</div>
+<div class="w3-container">
     <section class="w3-section" id="project">
         <span>Project</span>
         <div class="w3-display-container">
@@ -196,10 +199,12 @@
             </div>
         </div>
     </section>
+</div>
+<div class="w3-container">
     <section class="w3-section" id="edu">
         <span>EDUCATION</span>
         <div class="w3-display-container">
-            <table class="w3-table-all w3-centered">
+            <table class="w3-table w3-striped w3-centered">
                 <thead>
                 <tr>
                     <th>교육명</th>
@@ -229,20 +234,22 @@
                 협업을 경험했습니다</p>
         </div>
     </section>
+</div>
+<div class="w3-container">
     <section class="w3-section" id="career">
         <span>CAREER</span>
         <div class="w3-display-container">
             <div class="w3-display-container">
                 <p>2016.11 ~ 2019.08</p>
                 <p>세무법인율 세종지사</p>
-                <hr>
                 <p>세무법인 업무로 거래처 관리 및 세무업무 전반
                     (4대보험 업무, 연말정산, 부가가치세, 종합소득세, 법인세 신고 및 결산 등)</p>
-                <hr>
                 <p>아직 개발자로서의 경력은 없습니다! 하지만 이전 업무경험을 살려 회계나 세무, 인사시스템에 대한 이해를 바탕으로 개발분야의 한 기능을 쉽게 적용할 수 있습니다</p>
             </div>
         </div>
     </section>
+</div>
+<div class="w3-container">
     <footer class="w3-section">
         <section class="w3-panel w3-black" id="contact">
             <span>CONTACT</span>
