@@ -6,20 +6,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="/css/w3.css">
     <style>
-        ul {
-            list-style: none;
 
-        }
-
-        li {
-            float: left;
-        }
-
-        header {
-            text-align: center;
+        #sidebar {
             display: flex;
             flex-direction: column;
-            align-items: center;
+            justify-content: space-between;
+            position: sticky;
+            opacity: 0.7;
+            backdrop-filter: blur(30px);
+        }
+
+        .w3-content {
+            height: 220px;
+        }
+
+        html {
+            scroll-snap-type: y mandatory;
+            overflow-y: scroll;
+        }
+
+        .w3-section {
+            width: 100vw;
+            height: 100vh;
+            scroll-snap-align: center;
+
+        }
+
+        #mySidebar {
+            opacity: 0.7;
+            top: 350px;
+            height: 280px;
         }
 
 
@@ -27,27 +43,37 @@
 </head>
 <body>
 <div class="w3-container">
-    <header class="w3-panel w3-sand">
+    <button class="w3-button w3-teal w3-xlarge w3-display-left" id="sidebar">☰</button>
+    <div class="w3-sidebar w3-bar-block w3-border-right w3-panel w3-blue" style="display:none" id="mySidebar">
         <nav>
             <ul class="w3-ul">
-                <li>Bong's</li>
-                <li>HOME</li>
-                <li>About Me!</li>
-                <li>Skills</li>
-                <li>Project</li>
-                <li>EDUCATION</li>
-                <li>CAREER</li>
-                <li>CONTACT</li>
+                <li><strong>Menu</strong></li>
+                <a href="javascript:void(0);" onclick="moveTo('about');">
+                    <li><strong>About</strong></li>
+                </a>
+                <a href="javascript:void(0);" onclick="moveTo('skills');">
+                    <li><strong>Skills</strong></li>
+                </a>
+                <a href="javascript:void(0);" onclick="moveTo('project');">
+                    <li><strong>Project</strong></li>
+                </a>
+                <a href="javascript:void(0);" onclick="moveTo('edu');">
+                    <li><strong>EDUCATION</strong></li>
+                </a>
+                <a href="javascript:void(0);" onclick="moveTo('career');">
+                    <li><strong>CAREER</strong></li>
+                </a>
+                <a href="javascript:void(0);" onclick="moveTo('contact');">
+                    <li><strong>CONTACT</strong></li>
+                </a>
             </ul>
         </nav>
-    </header>
-    <div class="w3-display-container">
-        <img class="w3-round" src="images/teamwork.jpg" alt="teamwork_img" width="100%" height="700px;">
-        <div class="w3-display-middle w3-large w3-opacity w3-white">안녕하세요!</div>
     </div>
-    <main class="w3-content">
-        <section class="w3-section">
-            <span>About Me</span>
+
+
+    <section class="w3-section" id="about">
+        <span>About Me</span>
+        <div class="w3-display-container">
             <h5>새로운 언어에 눈을 뜬 개발자</h5>
             <h4>제목 어쩌고 저쩌고~</h4>
             <p>본문 ㅁㄴ아ㅣㅓㅁ나이ㅓ
@@ -56,107 +82,210 @@
                 ㅇㅁㄴㅇ
                 ㅁㄴㅇ
             </p>
-        </section>
-
-        <section class="w3-section">
-            <div class="w3-container">
-                <span>Skills</span>
+        </div>
+    </section>
+    <section class="w3-section" id="skills">
+        <span>Skills</span>
+        <div class="w3-row-padding">
+            <div class="w3-content w3-col l6 w3-margin-top">
                 <p>JAVA</p>
                 <div class="w3-light-grey w3-round">
                     <div class="w3-container w3-round w3-blue" style="width:60%">60%</div>
                 </div>
-                <p>자바 기초를 시작으로 처음 프로그래밍 언어를 배웠습니다. 기초문법부터 시작해서 객체지향과 중급자바과정을 배우고 MVC 패턴을 익히고, Spring framework를 사용하면서
-                    웹개발의 기본을 다졌습니다. </p>
+                <p>자바 기초를 시작으로 처음 프로그래밍 언어를 배웠습니다. 기초문법부터 시작해서 객체지향과 중급자바과정을 배우고 MVC 패턴을 익히고, Spring framework를
+                    사용하면서 웹개발의 기본을 다졌습니다. </p>
             </div>
-            <div class="w3-container">
+            <div class="w3-content w3-col l6 w3-margin-top">
                 <p>Python</p>
                 <div class="w3-light-grey w3-round">
-                    <div class="w3-container w3-round w3-blue" style="width:60%">60%</div>
+                    <div class="w3-container w3-round w3-green" style="width:30%">30%</div>
                 </div>
-                <p>자바 기초를 시작으로 처음 프로그래밍 언어를 배웠습니다. 기초문법부터 시작해서 객체지향과 중급자바과정을 배우고 MVC 패턴을 익히고, Spring framework를 사용하면서
-                    웹개발의 기본을 다졌습니다. </p>
+                <p>기초문법을 간단하게 배우면서, 자바와 어떤점이 비슷하고 다른지를 배워나가며, 한가지 언어에만 충실해도 다른언어를 배우는데 크게 도움이 되는 것을 익혔습니다.
+                    라이브러리를
+                    활용하여
+                    웹 스크래핑(BeautifulSoup), 글자와 이미지 인식 (Open CV)과 데이터분석과 시각화(Pandas, NumPy) 등을 경험해 봤습니다. </p>
             </div>
-            <div class="w3-container">
-                <p>HTML5</p>
+            <div class="w3-content w3-col l6 w3-margin-top">
+                <p>HTML5 & CSS3</p>
                 <div class="w3-light-grey w3-round">
-                    <div class="w3-container w3-round w3-blue" style="width:60%">60%</div>
+                    <div class="w3-container w3-round w3-blue" style="width:40%">40%</div>
                 </div>
-                <p>자바 기초를 시작으로 처음 프로그래밍 언어를 배웠습니다. 기초문법부터 시작해서 객체지향과 중급자바과정을 배우고 MVC 패턴을 익히고, Spring framework를 사용하면서
-                    웹개발의 기본을 다졌습니다. </p>
+                <p>마크업 언어인 HTML과 스타일시트언어인 CSS를 배우고 DOM구조를 통해 전체적인 HTML의 구조와 선택자를 통한 CSS 적용 등으로 웹페이지의 전반적인 설계과
+                    구현을
+                    배웠습니다</p>
             </div>
-            <div class="w3-container">
-                <p>CSS3</p>
-                <div class="w3-light-grey w3-round">
-                    <div class="w3-container w3-round w3-blue" style="width:60%">60%</div>
-                </div>
-                <p>자바 기초를 시작으로 처음 프로그래밍 언어를 배웠습니다. 기초문법부터 시작해서 객체지향과 중급자바과정을 배우고 MVC 패턴을 익히고, Spring framework를 사용하면서
-                    웹개발의 기본을 다졌습니다. </p>
-            </div>
-            <div class="w3-container">
+            <div class="w3-content w3-col l6 w3-margin-top">
                 <p>Java Script</p>
                 <div class="w3-light-grey w3-round">
-                    <div class="w3-container w3-round w3-blue" style="width:60%">60%</div>
+                    <div class="w3-container w3-round w3-green" style="width:50%">50%</div>
                 </div>
-                <p>자바 기초를 시작으로 처음 프로그래밍 언어를 배웠습니다. 기초문법부터 시작해서 객체지향과 중급자바과정을 배우고 MVC 패턴을 익히고, Spring framework를 사용하면서
-                    웹개발의 기본을 다졌습니다. </p>
+                <p>Java Script를 통해 동적언어의 특성을 배우고, HTML과 CSS로 이루어진 웹페이지를 동적으로 만드는 방법을 배웠습니다. 특히 jQuery를 활용하여
+                    Ajax로
+                    비동기통신을 활용하여, 사용자의 UX를 향상시킬 수 있는 방법을 주로 사용했으며,
+                    자연스럽게 JSON타입에 대해서도 많이 배우고 익혔습니다.</p>
             </div>
-            <div class="w3-container">
-                <p>RDBMS</p>
+            <div class="w3-content w3-col l6 w3-margin-top">
+                <p>RDMBS</p>
                 <div class="w3-light-grey w3-round">
-                    <div class="w3-container w3-round w3-blue" style="width:60%">60%</div>
+                    <div class="w3-container w3-round w3-blue" style="width:50%">50%</div>
                 </div>
-                <p>자바 기초를 시작으로 처음 프로그래밍 언어를 배웠습니다. 기초문법부터 시작해서 객체지향과 중급자바과정을 배우고 MVC 패턴을 익히고, Spring framework를 사용하면서
-                    웹개발의 기본을 다졌습니다. </p>
+                <p>Oracle을 주로 사용하여 프로젝트를 진행하였고, 테스트나 연습용 DB로는 MariaDB를 사용해 보면서 관계형데이터베이스에 대해 익히고 배웠습니다. 프로젝트에서
+                    직접
+                    데이터모델링과 개념 ~ 물리 설계까지 해봤습니다. 현재는
+                    어느 한 DB에 종속되지 않게 ANSI표준으로 SQL을 작성해보며 공부하고 있습니다.</p>
             </div>
-            <div class="w3-container">
-                <p>Mybatis</p>
+            <div class="w3-content w3-col l6 w3-margin-top">
+                <p>Mybatis / JPA(Hibernate)</p>
                 <div class="w3-light-grey w3-round">
-                    <div class="w3-container w3-round w3-blue" style="width:60%">60%</div>
+                    <div class="w3-container w3-round w3-green" style="width:60%">60%</div>
                 </div>
-                <p>자바 기초를 시작으로 처음 프로그래밍 언어를 배웠습니다. 기초문법부터 시작해서 객체지향과 중급자바과정을 배우고 MVC 패턴을 익히고, Spring framework를 사용하면서
-                    웹개발의 기본을 다졌습니다. </p>
+                <p>SQL Mapper와 ORM 기술 둘 다 사용해 보면서 DB와 프로그래밍 언어 사이의 데이터통신을 익혔습니다. 두 기술의 장단점을 직접 체감해 보면서 기본적인
+                    CRUD와
+                    동적쿼리를 익혔습니다.</p>
             </div>
-            <div class="w3-container">
-                <p>JPA</p>
-                <div class="w3-light-grey w3-round">
-                    <div class="w3-container w3-round w3-blue" style="width:60%">60%</div>
-                </div>
-                <p>자바 기초를 시작으로 처음 프로그래밍 언어를 배웠습니다. 기초문법부터 시작해서 객체지향과 중급자바과정을 배우고 MVC 패턴을 익히고, Spring framework를 사용하면서
-                    웹개발의 기본을 다졌습니다. </p>
-            </div>
-            <div class="w3-container">
-                <p>AWS EC2</p>
-                <div class="w3-light-grey w3-round">
-                    <div class="w3-container w3-round w3-blue" style="width:60%">60%</div>
-                </div>
-                <p>자바 기초를 시작으로 처음 프로그래밍 언어를 배웠습니다. 기초문법부터 시작해서 객체지향과 중급자바과정을 배우고 MVC 패턴을 익히고, Spring framework를 사용하면서
-                    웹개발의 기본을 다졌습니다. </p>
-            </div>
-            <div class="w3-container">
+            <div class="w3-content w3-col l6 w3-margin-top">
                 <p>Git</p>
                 <div class="w3-light-grey w3-round">
-                    <div class="w3-container w3-round w3-blue" style="width:60%">60%</div>
+                    <div class="w3-container w3-round w3-blue" style="width:40%">40%</div>
                 </div>
-                <p>자바 기초를 시작으로 처음 프로그래밍 언어를 배웠습니다. 기초문법부터 시작해서 객체지향과 중급자바과정을 배우고 MVC 패턴을 익히고, Spring framework를 사용하면서
-                    웹개발의 기본을 다졌습니다. </p>
+                <p>주로 Git을 통해 형상관리를 했으며, Svn과 Redmine을 통한 프로젝트의 형상관리 / 협업을 진행했습니다. </p>
             </div>
-        </section>
-        <section class="w3-section">
-            <span>Project</span>
-
-        </section>
-        <section class="w3-section">
-            <span>EDUCATION</span>
-        </section>
-
-        <section class="w3-section">
-            <span>CAREER</span>
-        </section>
-    </main>
-    <footer>
-        <section class="footer-selection">
+            <div class="w3-content w3-col l6 w3-margin-top">
+                <p>EC2</p>
+                <div class="w3-light-grey w3-round">
+                    <div class="w3-container w3-round w3-green" style="width:30%">30%</div>
+                </div>
+                <p>주로 AWS에서 제공되는 EC2(가상컴퓨팅임대)를 통해 간단하게 나마 Ubuntu 혹은 CentOs의 리눅스 환경을 구축하고 가상서버를 구동해봤습니다. 이메일 서버와
+                    시연용
+                    프로젝트의 배포(+ 도메인 연결)를 직접 찾아가며 학습, 구현했습니다.</p>
+            </div>
+        </div>
+    </section>
+    <section class="w3-section" id="project">
+        <span>Project</span>
+        <div class="w3-display-container">
+            <div class="w3-display-container">
+                <h6>온라인 경매사이트</h6>
+                <p>온라인에 물품을 올려서 지정된 기간동안 입찰을 통해 낙찰, 유찰을 통한 일반경매와,
+                    실시간 화상 or 채팅을 통한 경매시스템으로 실시간 경매가 가능한 사이트를 목표로 프로젝트를 진행</p>
+                <div class="w3-display-container">
+                    <h4>담당업무 · 기능구현</h4>
+                    <p>DB 모델링 - 개념 ~ 물리 ERD 설계와 구현과 테스트 데이터를 직접 넣어보며 테스트, view를 생성하여
+                        팀원들이 조회 로직을 조금 더 쉽게 처리 할 수 있도록 했습니다</p>
+                    <p>물품등록 ~ 낙찰까지 로직구현</p>
+                    <p>경매할 물건을 회원이 등록부터, 상세조회(남은 경매기간확인, 최고입찰가 정보), 낙찰까지의 화면과 기능을 구현했습니다</p>
+                </div>
+            </div>
+            <div class="w3-display-container">
+                <h6>학사시스템 LMS</h6>
+                <p>대학교를 대상으로 표준학사 시스템을 도입하고, 기본학사 관리 이외에도 사용자에게 여러 부가기능을 제공하는 등 UI/UX 친화적인 사이트 구축을 목표</p>
+                <div class="w3-display-container">
+                    <h4>담당업무 · 기능구현</h4>
+                    <p>DB 모델링 / 개발환경 구축 - 표준행정용어사전을 기반으로 ERD 테이블 설계와 구현, Spring Boot를 사용한 기본적인 공통라이브러리 설정 등 기본 개발환경
+                        구축</p>
+                    <p>메일서버 구축 - AWS의 EC2를 사용하여 리눅스 환경에서 24시간 구동가능한 이메일서버 (Apache James)를 구축했습니다</p>
+                    <p>메일클라이언트 기능 구현 - 구축한 이메일서버를 기반으로 메일을 내부와 외부(기존 포털사이트 등의 메일주소)로 메일을 주고 받을 수 있는 페이지 구성 및 기능구현을
+                        했습니다.</p>
+                    <p>도메인 설정 및 배포 - 프로젝트 시연용으로 EC2 서비스로 jar파일을 실행하여 배포했으며, 도메인을 구입하여 별도의 이메일주소와 사이트의 주소를 가질 수 있도록
+                        했습니다.</p>
+                    <p>전자결재 시스템 구현 - 학사관리에서 직원의 전자결재 로직을 구현 했습니다. 기안 ~ 승인 / 반려까지 기능을 구현하고, 추가로 학생이나 기타 교원등이 별도의 민원
+                        요청을
+                        했을 때,
+                        해당 업무가 전자결재로 넘어오고, 최종승인이 되었을 때 업무가 진행되는 후처리 로직을 구현 했습니다</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="w3-section" id="edu">
+        <span>EDUCATION</span>
+        <div class="w3-display-container">
+            <table class="w3-table-all w3-centered">
+                <thead>
+                <tr>
+                    <th>교육명</th>
+                    <th>교육기간</th>
+                    <th>교육기간</th>
+                    <th>교육내용</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th>전자정부 표준 프레임워크 기반 풀-스택 개발자 양성과정</th>
+                    <th>2021.06.07 ~
+                        2022.01.18
+                        (약8개월)
+                    </th>
+                    <th>재단법인 대덕인재개발원</th>
+                    <th>SW개발 이론 및 실습
+                        SW개발 실무 프로젝트
+                        총 1240시간
+                    </th>
+                </tr>
+                </tbody>
+            </table>
+            <p>재단법인 대덕인재개발원에서 자바기초와 중급자바, 오라클을 기반으로 한 관계형 DB의 모델링과 SQL에 대배 배우고 HTML, CSS, JavaScript를 기초로 하여 JSP를 통한
+                Front-end 구성을 배웠습니다
+                또한 Spring Framework를 이용한 MVC패턴 기반의 웹페이지 구현을 배우고, 프로젝트를 거치면서 여러 산출물과 Git 혹은 Svn과 RedMine을 통한 형상관리와
+                협업을 경험했습니다</p>
+        </div>
+    </section>
+    <section class="w3-section" id="career">
+        <span>CAREER</span>
+        <div class="w3-display-container">
+            <div class="w3-display-container">
+                <p>2016.11 ~ 2019.08</p>
+                <p>세무법인율 세종지사</p>
+                <hr>
+                <p>세무법인 업무로 거래처 관리 및 세무업무 전반
+                    (4대보험 업무, 연말정산, 부가가치세, 종합소득세, 법인세 신고 및 결산 등)</p>
+                <hr>
+                <p>아직 개발자로서의 경력은 없습니다! 하지만 이전 업무경험을 살려 회계나 세무, 인사시스템에 대한 이해를 바탕으로 개발분야의 한 기능을 쉽게 적용할 수 있습니다</p>
+            </div>
+        </div>
+    </section>
+    <footer class="w3-section">
+        <section class="w3-panel w3-black" id="contact">
+            <span>CONTACT</span>
+            <address>Email - hyeonminbong.dev@gmail.com</address>
+            <p>HP - 010-7441-9731</p>
+            <p>GitHub - https://github.com/onyx-ken</p>
         </section>
     </footer>
 </div>
 </body>
+
+<script>
+
+    function moveTo(id) {
+        let location = document.querySelector('#' + id).offsetTop;
+        window.scrollTo({top: location, behavior: 'smooth'});
+    }
+
+    function w3_open() {
+        document.getElementById("mySidebar").style.display = "block";
+    }
+
+    function w3_close() {
+        document.getElementById("mySidebar").style.display = "none";
+    }
+
+
+    let open = document.querySelector("#sidebar");
+
+    open.addEventListener("mouseover", function () {
+
+        w3_open();
+
+    })
+
+    let close = document.querySelector("#mySidebar");
+
+    close.addEventListener("mouseleave", function () {
+
+        w3_close();
+
+    })
+
+
+</script>
 </html>
