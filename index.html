@@ -15,7 +15,7 @@
             margin: 5px;
         }
 
-        #sidebar {
+        #mySidebar {
             display: flex;
             flex-direction: column;
             justify-content: space-between;
@@ -44,7 +44,7 @@
         #mySidebar {
             opacity: 0.7;
             top: 350px;
-            height: 280px;
+            height: 310px;
         }
 
         .w3-image {
@@ -52,15 +52,24 @@
             height: 100vh;
         }
 
+        #contact {
+            scroll-snap-stop: always;
+            scroll-snap-align: end;
+            position: relative;
+            height: auto;
+            width: 100%;
+        }
+
 
     </style>
 </head>
 <body>
-<button class="w3-button w3-teal w3-xlarge w3-display-left" id="sidebar">☰</button>
-<div class="w3-sidebar w3-bar-block w3-border-right w3-panel w3-blue" style="display:none" id="mySidebar">
+<div class="w3-sidebar w3-bar-block w3-border-right w3-panel w3-blue" id="mySidebar">
     <nav>
         <ul class="w3-ul">
-            <li><strong>Menu</strong></li>
+            <a href="javascript:void(0);" onclick="moveTo('menu');">
+                <li><strong>Menu</strong></li>
+            </a>
             <a href="javascript:void(0);" onclick="moveTo('about');">
                 <li><strong>About</strong></li>
             </a>
@@ -73,6 +82,9 @@
             <a href="javascript:void(0);" onclick="moveTo('edu');">
                 <li><strong>EDUCATION</strong></li>
             </a>
+            <a href="javascript:void(0);" onclick="moveTo('cert');">
+                <li><strong>CERTIFICATE</strong></li>
+            </a>
             <a href="javascript:void(0);" onclick="moveTo('career');">
                 <li><strong>CAREER</strong></li>
             </a>
@@ -84,14 +96,14 @@
 </div>
 
 <div class="w3-content">
-    <section class="w3-section">
+    <section class="w3-section" id="menu">
         <img src="images/stack.png" alt="stackImg" class="w3-image">
     </section>
     <section class="w3-section" id="about">
         <p class="w3-lobster">About Me</p>
         <div class="w3-display-container">
-            <h5>새로운 언어에 눈을 뜬 개발자</h5>
-            <h4>제목 어쩌고 저쩌고~</h4>
+            <h5>주제용 제목!</h5>
+            <h4>소제목 어쩌고 저쩌고~</h4>
             <p>본문 ㅁㄴ아ㅣㅓㅁ나이ㅓ
                 ㅁㄴㅇ
                 ㅁㄴㅇㅁㄴ
@@ -184,7 +196,7 @@
     <section class="w3-section" id="project">
         <p class="w3-lobster">Project</p>
         <div class="w3-display-container">
-            <div class="w3-display-container">
+            <div class="w3-card">
                 <h6>온라인 경매사이트</h6>
                 <p>온라인에 물품을 올려서 지정된 기간동안 입찰을 통해 낙찰, 유찰을 통한 일반경매와,
                     실시간 화상 or 채팅을 통한 경매시스템으로 실시간 경매가 가능한 사이트를 목표로 프로젝트를 진행</p>
@@ -196,7 +208,7 @@
                     <p>경매할 물건을 회원이 등록부터, 상세조회(남은 경매기간확인, 최고입찰가 정보), 낙찰까지의 화면과 기능을 구현했습니다</p>
                 </div>
             </div>
-            <div class="w3-display-container">
+            <div class="w3-card">
                 <h6>학사시스템 LMS</h6>
                 <p>대학교를 대상으로 표준학사 시스템을 도입하고, 기본학사 관리 이외에도 사용자에게 여러 부가기능을 제공하는 등 UI/UX 친화적인 사이트 구축을 목표</p>
                 <div class="w3-display-container">
@@ -251,30 +263,82 @@
                 또한 Spring Framework를 이용한 MVC패턴 기반의 웹페이지 구현을 배우고, 프로젝트를 거치면서 여러 산출물과 Git 혹은 Svn과 RedMine을 통한 형상관리와
                 협업을 경험했습니다</p>
         </div>
-        <p class="w3-lobster">CAREER</p>
-        <div class="w3-content w3-card">
-            <section class="w3-section" id="career">
+        <section class="w3-section" id="cert">
+            <p class="w3-lobster">CERTIFICATE</p>
+            <div class="w3-content w3-card">
                 <div class="w3-display-container">
-                    <p>2016.11 ~ 2019.08</p>
-                    <p>세무법인율 세종지사</p>
-                    <p>세무법인 업무로 거래처 관리 및 세무업무 전반
-                        (4대보험 업무, 연말정산, 부가가치세, 종합소득세, 법인세 신고 및 결산 등)</p>
-                    <p>아직 개발자로서의 경력은 없습니다! 하지만 이전 업무경험을 살려 회계나 세무, 인사시스템에 대한 이해를 바탕으로 개발분야의 한 기능을 쉽게 적용할 수 있습니다</p>
+                    <table class="w3-table-all w3-centered">
+                        <thead>
+                        <tr class="w3-light-gray">
+                            <th>자격명</th>
+                            <th>취득연월일</th>
+                            <th>발행처</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr class="w3-hover-blue">
+                            <th>정보처리기사</th>
+                            <th>2013.11.15</th>
+                            <th>한국산업인력공단</th>
+                        <tr>
+                            <th colspan="3" class="w3-light-grey">대학교 졸업전 정보처리기사를 취득했습니다. 현재와는 수험난이도가 다르긴 하지만 전반적인 컴퓨터에
+                                대한 이론에 대해서 배웠습니다
+                            </th>
+                        </tr>
+                        </tr>
+                        <tr class="w3-hover-blue">
+                            <th>SQLD</th>
+                            <th>2021.10.01</th>
+                            <th>한국데이터산업진흥원</th>
+                        </tr>
+                        <tr class="w3-light-grey">
+                            <th colspan="3">Oracle과 Oracle Server를 대상으로 한 데이터 모델링에 대한 이해와 SQL의 이해와 활용 등을 배우며 기본적인 DML
+                                문으로 CRUD를 수행하고, Join과 서브쿼리를 표현하는 방법을 학습했습니다
+                            </th>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <section class="w3-section" id="career">
+                <p class="w3-lobster">CAREER</p>
+                <div class="w3-content w3-card">
+                    <div class="w3-display-container">
+                        <table class="w3-table-all w3-centered">
+                            <thead>
+                            <tr class="w3-light-gray">
+                                <th>근무기간</th>
+                                <th>근무처</th>
+                                <th>업무내용</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr class="w3-hover-blue">
+                                <th>2016.11 ~ 2019.08</th>
+                                <th>세무법인율 세종지사</th>
+                                <th>세무법인 업무로 거래처 관리 및 세무업무 전반
+                                    (4대보험 업무, 연말정산, 부가가치세, 종합소득세, 법인세 신고 및 결산 등)
+                                </th>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <p class="w3-padding-large">아직 개발자로서의 경력은 없습니다! 하지만 이전 업무경험을 살려 회계나 세무, 인사시스템에 대한 이해를 바탕으로 개발분야의
+                            한 기능을 쉽게 적용할 수 있습니다</p>
+                    </div>
                 </div>
             </section>
-        </div>
+        </section>
     </section>
 </div>
-<div class="w3-content">
-    <section class="w3-black" id="contact">
+<div class="w3-container">
+    <footer class="w3-black" id="contact">
         <span>CONTACT</span>
         <address>Email - hyeonminbong.dev@gmail.com</address>
         <p>HP - 010-7441-9731</p>
         <p>GitHub - https://github.com/onyx-ken</p>
-    </section>
+    </footer>
 </div>
 </body>
-
 <script>
 
     function moveTo(id) {
@@ -306,7 +370,5 @@
         w3_close();
 
     })
-
-
 </script>
 </html>
