@@ -5,7 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="/css/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster&effect=shadow-multiple">
     <style>
+
+        .w3-lobster {
+            font-family: "Lobster", Sans-serif;
+            font-size: x-large;
+            padding: 20px;
+            margin: 5px;
+        }
+
         #sidebar {
             display: flex;
             flex-direction: column;
@@ -36,6 +45,11 @@
             opacity: 0.7;
             top: 350px;
             height: 280px;
+        }
+
+        .w3-image {
+            width: 100vw;
+            height: 100vh;
         }
 
 
@@ -70,8 +84,11 @@
 </div>
 
 <div class="w3-content">
+    <section class="w3-section">
+        <img src="images/stack.png" alt="stackImg" class="w3-image">
+    </section>
     <section class="w3-section" id="about">
-        <span>About Me</span>
+        <p class="w3-lobster">About Me</p>
         <div class="w3-display-container">
             <h5>새로운 언어에 눈을 뜬 개발자</h5>
             <h4>제목 어쩌고 저쩌고~</h4>
@@ -86,7 +103,7 @@
 </div>
 <div class="w3-content">
     <section class="w3-section" id="skills">
-        <span>Skills</span>
+        <p class="w3-lobster">Skills</p>
         <div class="w3-row-padding">
             <div class="list w3-content w3-col l6 w3-margin-top w3-card">
                 <p>JAVA</p>
@@ -165,7 +182,7 @@
 </div>
 <div class="w3-content">
     <section class="w3-section" id="project">
-        <span>Project</span>
+        <p class="w3-lobster">Project</p>
         <div class="w3-display-container">
             <div class="w3-display-container">
                 <h6>온라인 경매사이트</h6>
@@ -202,11 +219,11 @@
 </div>
 <div class="w3-content">
     <section class="w3-section" id="edu">
-        <span>EDUCATION</span>
-        <div class="w3-display-container">
-            <table class="w3-table w3-striped w3-centered">
+        <p class="w3-lobster">EDUCATION</p>
+        <div class="w3-display-container w3-card">
+            <table class="w3-table-all w3-centered">
                 <thead>
-                <tr>
+                <tr class="w3-light-gray">
                     <th>교육명</th>
                     <th>교육기간</th>
                     <th>교육기간</th>
@@ -214,7 +231,7 @@
                 </tr>
                 </thead>
                 <tbody>
-                <tr>
+                <tr class="w3-hover-blue">
                     <th>전자정부 표준 프레임워크 기반 풀-스택 개발자 양성과정</th>
                     <th>2021.06.07 ~
                         2022.01.18
@@ -228,14 +245,15 @@
                 </tr>
                 </tbody>
             </table>
-            <p>재단법인 대덕인재개발원에서 자바기초와 중급자바, 오라클을 기반으로 한 관계형 DB의 모델링과 SQL에 대배 배우고 HTML, CSS, JavaScript를 기초로 하여 JSP를 통한
+            <p class="w3-padding-large">재단법인 대덕인재개발원에서 자바기초와 중급자바, 오라클을 기반으로 한 관계형 DB의 모델링과 SQL에 대배 배우고 HTML, CSS,
+                JavaScript를 기초로 하여 JSP를 통한
                 Front-end 구성을 배웠습니다
                 또한 Spring Framework를 이용한 MVC패턴 기반의 웹페이지 구현을 배우고, 프로젝트를 거치면서 여러 산출물과 Git 혹은 Svn과 RedMine을 통한 형상관리와
                 협업을 경험했습니다</p>
         </div>
-        <div class="w3-content">
+        <p class="w3-lobster">CAREER</p>
+        <div class="w3-content w3-card">
             <section class="w3-section" id="career">
-                <span>CAREER</span>
                 <div class="w3-display-container">
                     <p>2016.11 ~ 2019.08</p>
                     <p>세무법인율 세종지사</p>
